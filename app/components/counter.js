@@ -12,7 +12,6 @@ import {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 0,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -24,31 +23,12 @@ const styles = StyleSheet.create({
     paddingLeft: 20,
     paddingRight: 20,
   },
-  welcome: {
+  countText: {
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-  input: {
-    borderColor: 'gray',
-    borderWidth: 1,
-    flex: 0.8,
-    textAlign: 'center',
-  },
-  spacer: {
-    flex: 0.1,
-  },
-  horizontalContainer: {
-    height: 40,
-    flexDirection: 'row',
-    alignSelf: 'stretch',
-  },
-  addSign: {
+  button: {
     borderWidth: 1,
     width: 30,
     height: 30,
@@ -70,19 +50,19 @@ const Counter = (props) => {
         onPress={props.subPressed}
       >
         <View>
-          <Text style={styles.addSign}>
+          <Text style={styles.button}>
             -
           </Text>
         </View>
       </TouchableOpacity>
-      <Text style={styles.welcome}>
+      <Text style={styles.countText}>
         {props.count}
       </Text>
       <TouchableOpacity
         onPress={props.addPressed}
       >
         <View>
-          <Text style={styles.addSign}>
+          <Text style={styles.button}>
             +
           </Text>
         </View>
